@@ -1,0 +1,24 @@
+@media (orientation: portrait) {
+
+    body {
+        font-size: 1.5rem;
+    }
+
+    #solar_img {
+        max-height: 80vh;
+        max-width: 75%;
+        float: right;
+        right: 0;
+    }
+}
+
+@media (orientation: landscape) {
+
+    #solar_img {
+        max-height: 80vh;
+        max-width: 45%;
+        position: absolute;
+        bottom: 5rem;
+        right: 0
+    }
+}
