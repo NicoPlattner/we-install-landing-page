@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hu" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="57x57" href="../res/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../res/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../res/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../res/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../res/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../res/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../res/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../res/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../res/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../res/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../res/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../res/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../res/icon/favicon-16x16.png">
+  <link rel="manifest" href="../res/icon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body style="background-color: #F3EED8; margin: 0; padding: 0">
+<div>
+  <img src="../res/logo.png" style="width: 15rem; margin: 3rem 5rem;">
+  <select onchange="changeLanguage()" id="lang" style="float: right; margin: 3rem 1em 3rem 5rem; width: 10rem; padding-left: 1em; padding-right: 1em; height: 2.5em; border: 1px solid dimgray; border-radius: 0.5em; font-size: 1em; font-weight: 500; font-family: 'Arial', sans-serif;">
+    <option value="en">English</option>
+    <option value="de">Deutsch</option>
+    <option value="hu" selected>Magyar</option>
+    <option value="cz">Čeština</option>
+  </select>
+</div>
+<div>
+  <div style="margin: 4rem 0 -1.5rem 5rem; font-size: 4.5rem; font-weight: 500; color: #2e452a; font-family: 'Jost', sans-serif;">
+    Szenvedély az energia iránt?
+  </div>
+  <div style="margin: 0 5rem; font-size: 4.5rem; font-weight: 500; color: #6a994e; font-family: 'Jost', sans-serif;">
+    Kíváncsi a külföldi munkára?
+  </div>
+  <p style="width: 50%; margin: 2rem 0 -1.5rem 5rem; font-size: 1.2em; line-height: 1.7em; font-family: 'Arial'">
+    Szenvedélyesen rajong a megújuló energiáért? Mi felveszünk! Csatlakozzon osztrák napelem-szerelő csapatunkhoz, és segítsen nekünk egy tisztább, fényesebb jövőt építeni az elkövetkező generációk számára. Jelentkezz most, és tegyél valamit a változásért!  </p>
+  <h2 style="width: 50%; margin: 7rem 0 -1.5rem 5rem; font-size: 2em; color: #6a994e; line-height: 1.7em; font-family: 'Arial'">
+    Hogyan működik ez?
+  </h2>
+  <ul style="width: 40%; margin: 1.3em 0 0 5rem; font-size: 1.2em; line-height: 1.7em; font-family: 'Arial'">
+    <li>Jelentkezzen a programunkra</li>
+    <li>Végezze el 1 hetes ingyenes tanfolyamunkat</li>
+    <li>Kapcsolódjon össze egy osztrák vállalattal az energiaszektorban</li>
+    <li>Segítünk a költözésben és az új otthonában való elindulásban!</li>
+  </ul>
+
+  <div class="mb-3" style="margin: 3rem 5rem">
+    <input id="email-field" placeholder="email" style="float: left; margin-right: 1em; width: 20rem; padding-left: 1em; padding-right: 1em; height: 2.5em; border: 1px solid dimgray; border-radius: 0.5em; font-size: 1em; font-weight: 500; font-family: 'Jost', sans-serif;"/>
+    <button onclick="goToConfirm()" style="float: left; padding-left: 1em; padding-right: 1em; height: 2.5em; background-color: #6a994e; color: white; border: none; border-radius: 0.5em; font-size: 1em; font-weight: 500; font-family: 'Jost', sans-serif;">Csatlakozzon várólistánkhoz</button>
+  </div>
+</div>
+<img src="../res/solar.png" id="solar_img">
+<script src="../script.js"></script>
+</body>
+</html>

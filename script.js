@@ -1,7 +1,37 @@
+function loadLanguage() {
+	if(['en', 'de', 'hu', 'cz'].includes(window.location.href.split('/')[4])) {
+		return;
+	}
+
+	var languages = window.navigator.languages;
+
+	for (let i = 0; i < languages.length; i++) {
+		if (languages[i] === 'de' || languages[i].split('-')[0] === 'de') {
+			window.location.href = "de/home.html";
+			return;
+		} else if (languages[i] === 'hu' || languages[i].split('-')[0] === 'hu') {
+			window.location.href = "hu/home.html";
+			return;
+		} else if (languages[i] === 'cs' || languages[i].split('-')[0] === 'cz') {
+			window.location.href = "cz/home.html";
+			return;
+		} else if (languages[i] === 'en' || languages[i].split('-')[0] === 'en') {
+			window.location.href = "en/home.html";
+			return;
+		}
+	}
+
+	window.location.href = "en/home.html";
+}
+
+function changeLanguage() {
+	var selected = document.getElementById('lang').value;
+	var url = window.location.href.split('/');
+	url[4] = selected;
+	window.location.href = url.join('/');
+}
+
 function goToConfirm() {
-
-	console.log('test')
-
 	var email = document.getElementById('email-field').value;
 
 	fetch('https://rwngheexphrwncvncvbd.supabase.co/rest/v1/Newsletter', {
@@ -14,9 +44,13 @@ function goToConfirm() {
 		body: JSON.stringify({ "email": email })
 	})
 
-	window.location.href = "newsletter-confirm.html";
+	var url = window.location.href.split('/');
+	url[5] = 'newsletter-confirm.html';
+	window.location.href = url.join('/');
 }
 
 function goToHome() {
-	 window.location.href = "/we-install-landing-page";
+	var url = window.location.href.split('/');
+	url[5] = 'home.html';
+	window.location.href = url.join('/');
 }
