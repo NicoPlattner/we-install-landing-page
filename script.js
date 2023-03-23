@@ -1,5 +1,5 @@
 function loadLanguage() {
-	if(['en', 'de', 'hu', 'cz'].includes(window.location.href.split('/')[4])) {
+	if(['en', 'de', 'hu', 'cz'].includes(window.location.href.split('/')[3])) {
 		return;
 	}
 
@@ -27,7 +27,7 @@ function loadLanguage() {
 function changeLanguage() {
 	var selected = document.getElementById('lang').value;
 	var url = window.location.href.split('/');
-	url[4] = selected;
+	url[3] = selected;
 	window.location.href = url.join('/');
 }
 
@@ -45,12 +45,12 @@ function goToConfirm() {
 	})
 
 	var url = window.location.href.split('/');
-	url[5] = 'newsletter-confirm';
+	url[4] = 'newsletter-confirm';
 	window.location.href = url.join('/');
 }
 
 function goToHome() {
 	var url = window.location.href.split('/');
-	url[5] = 'home';
+	url[4] = 'home';
 	window.location.href = url.join('/');
 }
