@@ -7,21 +7,21 @@ function loadLanguage() {
 
 	for (let i = 0; i < languages.length; i++) {
 		if (languages[i] === 'de' || languages[i].split('-')[0] === 'de') {
-			window.location.href = "de/home.html";
+			window.location.href = "de/home";
 			return;
 		} else if (languages[i] === 'hu' || languages[i].split('-')[0] === 'hu') {
-			window.location.href = "hu/home.html";
+			window.location.href = "hu/home";
 			return;
 		} else if (languages[i] === 'cs' || languages[i].split('-')[0] === 'cz') {
-			window.location.href = "cz/home.html";
+			window.location.href = "cz/home";
 			return;
 		} else if (languages[i] === 'en' || languages[i].split('-')[0] === 'en') {
-			window.location.href = "en/home.html";
+			window.location.href = "en/home";
 			return;
 		}
 	}
 
-	window.location.href = "en/home.html";
+	window.location.href = "en/home";
 }
 
 function changeLanguage() {
@@ -45,12 +45,12 @@ function goToConfirm() {
 	})
 
 	var url = window.location.href.split('/');
-	url[5] = 'newsletter-confirm.html';
+	url[5] = 'newsletter-confirm';
 	window.location.href = url.join('/');
 }
 
 function goToHome() {
 	var url = window.location.href.split('/');
-	url[5] = 'home.html';
+	url[5] = 'home';
 	window.location.href = url.join('/');
 }
